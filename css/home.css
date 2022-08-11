@@ -1,0 +1,152 @@
+header {
+  background-image: url(../img/header2.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.header__container {
+  width: 100vw;
+  bottom: 10%;
+  position: absolute;
+  text-align: center;
+  color: var(--color-bg1);
+  text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 1);
+}
+
+.header__container h1 {
+  font-size: 8rem;
+  font-family: "StretchPro", "Montserrat", sans-serif;
+  letter-spacing: 1.5rem;
+}
+
+.header__container p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* aou */
+
+.aou {
+  background: var(--color-bg2);
+  padding: 5rem 0 5rem;
+}
+
+.aou h1 {
+  color: var(--color-bg1);
+}
+
+.aou__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin: 3rem 0 3rem;
+}
+
+.aou__card img {
+  border: 2px solid var(--color-bg1);
+  transition: var(--transition);
+}
+
+.aou__card img:hover {
+  padding: 0.5rem;
+}
+
+.siswa__info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-bg1);
+  margin-top: 1rem;
+}
+
+.siswa__info h4 {
+  transition: var(--transition);
+}
+
+.aou__card:hover .siswa__info h4 {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+/* gallery */
+
+.gallery__container {
+  padding: 5rem 0 5rem;
+}
+
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 3rem 0 3rem;
+}
+
+.img-gallery img {
+  filter: saturate(0);
+  transition: var(--transition);
+}
+
+.img-gallery img:hover {
+  filter: saturate(1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  z-index: 1;
+}
+
+.gallery h1 {
+  border-color: var(--color-bg2);
+}
+
+/* Media quary (TAB) */
+
+@media screen and (max-width: 1024px) {
+  /* header */
+
+  .header__container h1 {
+    font-size: 5rem;
+  }
+
+  /* gallery */
+  .img-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .img-gallery img:nth-child(7),
+  .img-gallery img:nth-child(8) {
+    display: none;
+  }
+
+  .img-gallery img {
+    filter: saturate(1);
+  }
+}
+
+/* media quary (mobile) */
+@media screen and (max-width: 600px) {
+  /* header */
+  .header__container h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1rem;
+  }
+
+  .header__container p {
+    font-size: 1rem;
+  }
+
+  /* all-of-us */
+  .aou__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .aou__card {
+    margin: 0 auto;
+    width: 75vw;
+  }
+
+  /* gallery */
+  .img-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

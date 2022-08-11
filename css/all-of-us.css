@@ -1,0 +1,93 @@
+.aou {
+  margin-top: 3rem;
+}
+
+.aou__container {
+  padding: 5rem 0 5rem;
+}
+
+.aou h1 {
+  border-color: var(--color-bg2);
+}
+
+.aou__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  margin-top: 3rem;
+}
+
+.aou__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.siswa-img {
+  border: 2px solid var(--color-bg2);
+  padding: 0.5rem;
+  transition: var(--transition);
+}
+
+.siswa-img:hover {
+  padding: 0.3rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.aou__card:hover h3 {
+  color: var(--color-primary) !important;
+  transition: var(--transition);
+}
+
+.aou__card:hover .siswa-img {
+  border-color: var(--color-primary);
+}
+
+.siswa-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.siswa-info h3,
+.siswa-info h4 {
+  font-family: "StretchPro", "Montserrat", sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+.siswa-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.siswa-info h5 {
+  font-size: 1.1rem;
+}
+
+.siswa-info i {
+  font-size: 1.2rem;
+}
+
+.siswa-info a {
+  color: var(--color-text);
+}
+
+.siswa-info p {
+  width: 12vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .aou__card {
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+  }
+
+  .siswa-info p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aou__cards {
+    grid-template-columns: 1fr;
+  }
+}
