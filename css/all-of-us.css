@@ -12,21 +12,20 @@
 
 .aou__cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
   margin-top: 3rem;
 }
 
 .aou__card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .siswa-img {
   border: 2px solid var(--color-bg2);
   padding: 0.5rem;
   transition: var(--transition);
+  margin-bottom: 1.5rem;
 }
 
 .siswa-img:hover {
@@ -71,18 +70,9 @@
   color: var(--color-text);
 }
 
-.siswa-info p {
-  width: 12vw;
-}
-
 @media screen and (max-width: 1024px) {
-  .aou__card {
-    grid-template-columns: 1fr;
-    margin-bottom: 1rem;
-  }
-
-  .siswa-info p {
-    width: 100%;
+  .nav__menu a {
+    color: var(--color-bg1);
   }
 }
 
